@@ -1,0 +1,12 @@
+<h1>Galería de Fotos</h1>
+
+<div class="photo-gallery">
+  <% @photos.each do |photo| %>
+    <div class="photo">
+      <%= image_tag photo.image.url, alt: photo.title, class: "photo1" %>
+      <h2><%= photo.title %></h2>
+      <p><%= photo.description %></p>
+      <%= link_to 'Ver foto', photo_path(photo) %>
+    </div>
+  <% end %>
+</div>
